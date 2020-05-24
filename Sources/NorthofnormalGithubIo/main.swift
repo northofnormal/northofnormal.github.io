@@ -1,4 +1,3 @@
-import CNAMEPublishPlugin
 import Foundation
 import Publish
 import Plot
@@ -32,7 +31,6 @@ try NonDotDev().publish(using: [
     .addDefaultSectionTitles(),
     .generateHTML(withTheme: .anneTheme),
     .generateSiteMap(),
-    .installPlugin(.generateCNAME(with: "northofnormal.dev/", "www.northofnormal.dev/")),
     .deploy(using: .gitHub("northofnormal/northofnormal.github.io", useSSH: false))
 ])
 
